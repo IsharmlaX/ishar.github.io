@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://mydomain.org/mysite/</loc>
+         <loc>https://notes.ishar.icu/</loc>
          <lastmod>2026-09-16</lastmod>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/blog/</loc>
+         <loc>https://notes.ishar.icu/blog/</loc>
          <lastmod>2026-09-16</lastmod>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/notes/</loc>
+         <loc>https://notes.ishar.icu/notes/</loc>
          <lastmod>2026-09-16</lastmod>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/notes/general/ma-yuan/</loc>
+         <loc>https://notes.ishar.icu/notes/general/ma-yuan/</loc>
          <lastmod>2026-09-16</lastmod>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/notes/general/mao-gai/</loc>
+         <loc>https://notes.ishar.icu/notes/general/mao-gai/</loc>
          <lastmod>2026-09-16</lastmod>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/projects/</loc>
+         <loc>https://notes.ishar.icu/projects/</loc>
          <lastmod>2026-09-16</lastmod>
     </url>
 </urlset>
