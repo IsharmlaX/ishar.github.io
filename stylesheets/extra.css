@@ -1,0 +1,344 @@
+/* A Fluid-inspired home page. Other documentation pages keep Material's UI. */
+body:has(.home) .md-header,
+body:has(.home) .md-tabs {
+  background: transparent;
+  box-shadow: none;
+  transition: background 180ms ease, box-shadow 180ms ease;
+}
+
+body:has(.home) .md-header {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+body:has(.home) .md-tabs {
+  position: absolute;
+  top: 2.4rem;
+  width: 100%;
+  z-index: 2;
+}
+
+body:has(.home) .md-header__button,
+body:has(.home) .md-header__title,
+body:has(.home) .md-tabs__link {
+  color: #fff;
+}
+
+body.home-scrolled .md-header,
+body.home-scrolled .md-tabs {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(34, 29, 44, 0.88);
+}
+
+body.home-scrolled .md-header {
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+body:has(.home) .md-sidebar {
+  display: none;
+}
+
+body:has(.home) .md-main {
+  background: #17131f;
+  margin-top: 0;
+}
+
+body:has(.home) .md-main__inner,
+.md-content:has(.home) {
+  display: block;
+  margin: 0;
+  max-width: none;
+}
+
+.md-content:has(.home) > .md-content__inner {
+  margin: 0;
+}
+
+.home {
+  --home-ink: #30313a;
+  --home-muted: #6b6c74;
+  --home-line: #e8e7eb;
+  --home-surface: #fff;
+  --home-accent: #6d5a91;
+  color: var(--home-ink);
+  margin: -1.5rem calc(50% - 50vw) 0;
+  overflow: hidden;
+}
+
+[data-md-color-scheme="slate"] .home {
+  --home-ink: #eeeeef;
+  --home-muted: #b8b6c0;
+  --home-line: #44434b;
+  --home-surface: #24242b;
+  --home-accent: #c7addf;
+}
+
+.home-hero {
+  align-items: center;
+  background-image: url("../images/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  min-height: max(40rem, 100vh);
+  padding: 8rem 1.5rem 6rem;
+  position: relative;
+  text-align: center;
+}
+
+.home-hero::before,
+.home-hero::after {
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.home-hero::before {
+  background: rgba(12, 10, 17, 0.38);
+}
+
+.home-hero::after {
+  background: linear-gradient(180deg, rgba(8, 7, 13, 0.34), transparent 42%, rgba(8, 7, 13, 0.56));
+}
+
+.home-hero__content {
+  color: #fff;
+  max-width: 52rem;
+  position: relative;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.home-kicker,
+.home-intro__label,
+.home-area__number,
+.home-quote span {
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-kicker {
+  margin: 0 0 1.4rem;
+}
+
+.home-hero h1 {
+  color: #fff;
+  font-size: clamp(3.25rem, 8vw, 6.75rem);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.08;
+  margin: 0;
+}
+
+.home-lead {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.9;
+  margin: 1.6rem auto 2.1rem;
+  max-width: 39rem;
+}
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  justify-content: center;
+}
+
+.home-button {
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 4px;
+  color: #fff;
+  display: inline-flex;
+  font-size: 0.86rem;
+  font-weight: 600;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.6rem 1.25rem;
+  text-decoration: none;
+  /* transition: background 160ms ease, color 160ms ease; */
+}
+
+.home-button:hover,
+.home-button--primary {
+  background: #fff;
+  color: #111 !important;
+}
+
+.home-button--primary:hover {
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.home-button--secondary {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* background: #111; */
+  /* border-color: #111; */
+  color: #fbf8f8 !important;
+}
+
+.home-button--secondary:hover {
+  background: #292929;
+  border-color: #292929;
+  color: #fff !important;
+}
+
+.home-scroll {
+  bottom: 1.7rem;
+  color: #fff;
+  font-size: 2rem;
+  left: 50%;
+  line-height: 1;
+  position: absolute;
+  text-decoration: none;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.home-intro,
+.home-areas {
+  margin-inline: auto;
+  max-width: 70rem;
+  padding-inline: 2rem;
+}
+
+.home-intro {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(9rem, 1fr) minmax(0, 2.2fr);
+  padding-block: clamp(4.5rem, 9vw, 8rem);
+}
+
+.home-intro__label,
+.home-area__number,
+.home-quote span {
+  color: var(--home-accent);
+}
+
+.home-intro h2 {
+  color: var(--home-ink);
+  font-size: clamp(2rem, 4.2vw, 3.35rem);
+  font-weight: 600;
+  line-height: 1.22;
+  margin: 0;
+}
+
+.home-intro p {
+  color: var(--home-muted);
+  font-size: 1.03rem;
+  line-height: 2;
+  margin: 1.35rem 0 0;
+  max-width: 44rem;
+}
+
+.home-areas {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: clamp(4.5rem, 9vw, 7rem);
+}
+
+.home-area {
+  background: var(--home-surface);
+  border: 1px solid var(--home-line);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(34, 28, 48, 0.05);
+  color: var(--home-ink);
+  min-height: 17.5rem;
+  padding: 2rem;
+  text-decoration: none;
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.home-area:hover {
+  box-shadow: 0 18px 36px rgba(34, 28, 48, 0.13);
+  color: var(--home-ink);
+  transform: translateY(-4px);
+}
+
+.home-area h2 {
+  color: var(--home-ink);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 2.25rem 0 0.55rem;
+}
+
+.home-area p {
+  color: var(--home-muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.home-area__link {
+  color: var(--home-accent);
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-top: 2.25rem;
+}
+
+.home-area__link span {
+  font-size: 1.1rem;
+  margin-left: 0.25rem;
+}
+
+.home-quote {
+  background: #292333;
+  color: #fff;
+  padding: clamp(4rem, 8vw, 6.5rem) 2rem;
+  text-align: center;
+}
+
+.home-quote p {
+  font-size: clamp(1.55rem, 3.4vw, 2.9rem);
+  line-height: 1.5;
+  margin: 0 auto 1.25rem;
+  max-width: 52rem;
+}
+
+.home-quote span {
+  color: #d7c8ee;
+}
+
+@media (min-width: 76.25em) {
+  .home-hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 44.9375em) {
+  body:has(.home) .md-tabs {
+    background: rgba(18, 15, 24, 0.18);
+  }
+
+  .home-hero {
+    min-height: 42rem;
+    padding: 8.5rem 1.25rem 5.5rem;
+  }
+
+  .home-intro {
+    grid-template-columns: 1fr;
+    padding-inline: 1.25rem;
+  }
+
+  .home-areas {
+    grid-template-columns: 1fr;
+    padding-inline: 1.25rem;
+  }
+
+  .home-area {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-button,
+  .home-area {
+    transition: none;
+  }
+}
